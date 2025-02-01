@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# README
 
-## Getting Started
+## Features
 
-First, run the development server:
+### 1. Convert PDF to Searchable PDF
+This script uses **PaddleOCR** to convert scanned PDFs into searchable PDFs. Key features include:
+- **Optical Character Recognition (OCR):** Extracts text from scanned documents.
+- **Multi-language Support:** Configurable for different languages.
+- **Font Compatibility:** Works with system fonts for accurate text rendering.
+
+### 2. Gemini AI Integration
+Utilizes **Google's Gemini AI** to generate text and image-based content. Key features include:
+- **Text Generation:** Creates human-like responses based on prompts.
+- **Vision Model:** Analyzes images alongside text for rich content generation.
+
+## Requirements
+
+### 1. Python Packages
+Ensure the following Python packages are installed:
+- `paddleocr`
+- `pdf2image`
+- `PyPDF2`
+- `Pillow`
+- `numpy`
+- `google-generativeai`
+
+### 2. System Dependencies
+- **Tesseract OCR** (for OCR functionality)
+- **Poppler** (for PDF to image conversion)
+
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pip install paddleocr pdf2image PyPDF2 Pillow numpy google-generativeai
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Additional System Setup
+- **Linux:**
+  ```bash
+  sudo apt-get install tesseract-ocr poppler-utils
+  ```
+- **Windows:**
+  - Download and install Tesseract OCR and Poppler from their official sources.
+  - Add them to your system PATH.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This README provides an overview of the project's features, requirements, and usage instructions. Adjust as needed for additional details.
